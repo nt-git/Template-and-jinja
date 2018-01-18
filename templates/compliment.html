@@ -7,6 +7,13 @@
   <title>A Compliment</title>
 </head>
 <body>
+    {% extends 'base.html' %}
+{% block title %}My awesome page title{% endblock %}
+
+{% block content %}
+    <h2>I'm a header!</h2>
+    <p>I'm a paragraph!</p>
+
     <div>
     <h1>Welcome!</h1>
     Hi {{ person }}! I think you're {{ compliment }}!<br>
@@ -18,4 +25,6 @@
     <input type="submit"></form>
 </div>
 </body>
+{% endblock %}
 </html>
+

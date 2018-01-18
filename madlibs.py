@@ -14,6 +14,8 @@ AWESOMENESS = [
     'smashing', 'lovely',
 ]
 
+madlib_pages = ["madlib.html", "madlib1.html"]
+
 
 @app.route('/')
 def start_here():
@@ -66,9 +68,10 @@ def show_madlib():
     place = request.args.getlist("place")
     # adjective2 = adjective2[3:-2]
     # return with a list
+    file_choice = choice(madlib_pages)
     print adjective2
 
-    return render_template("madlib.html", person=person, color=color, noun=noun, adjective=adjective, adjective2=adjective2, place=place)
+    return render_template(file_choice, person=person, color=color, noun=noun, adjective=adjective, adjective2=adjective2, place=place)
 
 
 if __name__ == '__main__':
