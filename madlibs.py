@@ -23,6 +23,7 @@ def start_here():
 
 
 @app.route('/hello')
+# decorator
 def say_hello():
     """Say hello to user."""
 
@@ -61,8 +62,13 @@ def show_madlib():
     color = request.args.get("color")
     noun = request.args.get("noun")
     adjective = request.args.get("adjective")
+    adjective2 = request.args.getlist("adjective2")
+    place = request.args.getlist("place")
+    # adjective2 = adjective2[3:-2]
+    # return with a list
+    print adjective2
 
-    return render_template("madlib.html", person=person, color=color, noun=noun, adjective=adjective)
+    return render_template("madlib.html", person=person, color=color, noun=noun, adjective=adjective, adjective2=adjective2, place=place)
 
 
 if __name__ == '__main__':

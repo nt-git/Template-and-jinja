@@ -4,9 +4,17 @@
   <title>Madlibs</title>
 </head>
 <body>
-    There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
-    When {{ person }} went to pick it up, it burst into flames in a totally
-    {{ adjective }} way.
+
+    There once was a {{ color }} {{ noun }} sitting  {% for item in place %}
+        {{ item }}
+     {% endfor %}in the Hackbright Lab.
+    When {{ person }} went to pick it up, it burst into {{ adjective2[0] }} flames
+    in a totally {{ adjective }} way.<br>
+
+    This was not the best way to kick off the United Nations meeting between
+
+
+
 
 </body>
 </html>

@@ -1,15 +1,21 @@
 <!doctype html>
+
+
 <html>
 <head>
+<link rel="stylesheet" href="static/madlibs.css">
   <title>A Compliment</title>
 </head>
 <body>
+    <div>
+    <h1>Welcome!</h1>
     Hi {{ person }}! I think you're {{ compliment }}!<br>
-    Would you like to play a game?<br>
+    Would you <span>like</span> to play a game?<br>
 
     <form action="/game">
     <input type="radio" value="yes" name="show_madlib"> Yes. :)  <br>
     <input type="radio" value="no" name="show_madlib"> No. :( <br><br>
     <input type="submit"></form>
+</div>
 </body>
 </html>
